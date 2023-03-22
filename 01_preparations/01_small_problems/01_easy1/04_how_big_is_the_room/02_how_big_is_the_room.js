@@ -4,8 +4,9 @@
 
 const readlineSync = require("readline-sync");
 
-let length, width, squareMeters, squareFeet, method;
+let length, width, squareMeters, method;
 const SQUAREFEET = 10.7639;
+const METERINFEET = 3.281;
 
 
 console.log("\nThis program will print the area of the room in both square meters and square feet.\n\n");
@@ -37,8 +38,8 @@ function meters () {
 
 function feet () {
 	
-	length = (+readlineSync.question("\nPlease enter numerical length of room (feet): \n")) / 3.281;
-	width = (+readlineSync.question("Please enter numerical width of room (feet): \n")) / 3.281;
+	length = (+readlineSync.question("\nPlease enter numerical length of room (feet): \n")) / METERINFEET;
+	width = (+readlineSync.question("Please enter numerical width of room (feet): \n")) / METERINFEET;
 	
 	return length * width;
 }
