@@ -16,12 +16,12 @@ method = +readlineSync.question("Which method will you use to enter your values:
 switch(method){
 	case 1:
 		squareMeters = meters();
-		printMeters(squareMeters);
+		print(squareMeters);
 	break;
 
 	case 2:	
 		squareMeters = feet();
-		printMeters(Math.ceil(squareMeters));
+		print(Math.ceil(squareMeters));
 	break;
 
 	default:
@@ -44,7 +44,7 @@ function feet () {
 	return length * width;
 }
 
-function printMeters (squareMeters) {
+function print (squareMeters) {
 	console.log(`\nThe area of the room is ${parseFloat(squareMeters).toFixed(2)} square meters (${parseFloat(squareMeters * SQUAREFEET).toFixed(2)} square feet).\n\n`);
 }
 
