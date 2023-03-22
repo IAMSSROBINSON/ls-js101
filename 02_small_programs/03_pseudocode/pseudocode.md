@@ -25,15 +25,15 @@ Programming language agnostic description / instructions for attempting to solve
 
 #### 1. A function that returns the sum of two numbers:
 
-START
+- START
 - SET 2 int variables with values or GET values from user input
 - pass variables to function called: sum()
 - READ the values passed into the function
 - IF the values are not integers: return, END
 - ELSE add values and return result to the caller
 - SET result from caller to a variable
-- PRINT result
-END
+- PRINT result  
+- END
 
 <br>
 
