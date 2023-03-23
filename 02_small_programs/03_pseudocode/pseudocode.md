@@ -39,6 +39,41 @@ Programming language agnostic description / instructions for attempting to solve
 
 #### 2. A function that takes an array of strings, and returns a string that is all those strings concatenated together:
 
+  ##### Informal: 
+  - Given a collection (Data Structure: array) of strings
+  - Create a function that iterates over each element inside the collection (Loop)
+  - The function should return 1 final string value which is the result of each string combined into one
+  
+	##### Formal:
+	- START
+	- SET a variable that will be used to store the final value
+	- DEFINE a function combineStrings()
+	- The function should receive 1 argument (an array)
+	- SET an empty string variable
+	- CALL the function and pass in the array of strings: combineStrings(array)
+	- Loop over each iteration of the array and READ the values
+	- SET the empty string = to the empty string + current iteration value
+	- When loop ends for length of the array
+	- RETURN final string variable
+	- PRINT final string value
+	- END
+
+	<br>
+	
+	##### Example:
+
+	```JavaScript
+	let arrayOfStrings = ["one", "two", "three", "four"];
+
+	let finalString = "";
+
+	arrayOfStrings.forEach((string)=>{
+		finalString += string;
+	});
+
+	console.log(finalString);
+	```
+	
 <br>
 
 #### 3. A method that takes an array of integers, and returns a new array with every other element from the original array, starting with the first element. For instance:
