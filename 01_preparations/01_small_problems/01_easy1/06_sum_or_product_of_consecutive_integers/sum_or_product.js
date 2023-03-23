@@ -1,3 +1,50 @@
+let readlineSync = require('readline-sync');
+
+console.log("\nThis program will print the sum of series or product of a given integer.");
+let number = +readlineSync.question("\nPlease enter a number greater than 0:\n");
+let method = (readlineSync.question("\nEnter 's' to compute the sum, or 'p to compute the product\n").toLowerCase());
+
+switch(method){
+	case "s":
+	printer(getSum(number), "sum", number);
+	break;
+
+	case "p":
+	printer(getProduct(number), "product", number);
+	break;
+
+	default: 
+	console.log("Invalid selection. End of program.");
+}
+
+function getSum (number) {
+
+		let sum = 0;
+
+		for(let i = sum; i <= number; i++){
+			sum += i;
+		}
+
+		return sum;
+}
+
+function getProduct (number) {
+
+	let product = 1;
+
+	for(let i = product; i <= number; i++){
+		product *= i;
+	}
+
+	return product;
+}
+
+function printer (value, string, number) {
+
+	console.log(`\nThe ${string} of the integers between 1 and ${number} is ${value}.\n\n`);
+}
+
+
 // Write a program that asks the user to enter an integer greater than 0, then asks whether the user wants to determine the sum or the product of all numbers between 1 and the entered integer, inclusive.
 
 // Examples:
@@ -64,48 +111,3 @@ Formal:
 Convert to code: 
 */
 
-let readlineSync = require('readline-sync');
-
-console.log("\nThis program will print the sum of series or product of a given integer.");
-let number = +readlineSync.question("\nPlease enter a number greater than 0:\n");
-let method = (readlineSync.question("\nEnter 's' to compute the sum, or 'p to compute the product\n").toLowerCase());
-
-switch(method){
-	case "s":
-	printer(getSum(number), "sum", number);
-	break;
-
-	case "p":
-	printer(getProduct(number), "product", number);
-	break;
-
-	default: 
-	console.log("Invalid selection. End of program.");
-}
-
-function getSum (number) {
-
-		let sum = 0;
-
-		for(let i = sum; i <= number; i++){
-			sum += i;
-		}
-
-		return sum;
-}
-
-function getProduct (number) {
-
-	let product = 1;
-
-	for(let i = product; i <= number; i++){
-		product *= i;
-	}
-
-	return product;
-}
-
-function printer (value, string, number) {
-
-	console.log(`\nThe ${string} of the integers between 1 and ${number} is ${value}.\n\n`);
-}
