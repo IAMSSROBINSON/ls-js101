@@ -107,7 +107,7 @@ The question calls for a 'method' which is typically a function stored as a prop
 - SET an array of integer elements: `let intArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];`
 - SET a `function everyOtherElement (intArray) {}` that accepts the array in the parameter value
 - READ and loop over the array elements in the function
-- increment the increment operator by +2 in the loop to read every other value e.g. 0, 2, 4, 6
+- increment the increment operator by +2 in the loop to read every other value e.g. index: 0, 2, 4, 6
 - SET an empty array
 - IF value at current index is 'every other' PUSH to empty array
 - return that new array
