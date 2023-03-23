@@ -2,6 +2,10 @@
 
 Programming language agnostic description / instructions for attempting to solve a problem (this can be considered part of the 'PEDAC' process for solving problems, inclusive of the Data Structures & Algorithms sections).
 
+Informal pseudocode is a relaxed talk through of the logical instructions required to solve the problem.
+
+Formal pseudocode takes into consideration the below keywords and makes use of concrete commands and even variable naming and a step closer to solving the problem with code.
+
 <br>
 
 ## Descriptive keywords
@@ -39,12 +43,12 @@ Programming language agnostic description / instructions for attempting to solve
 
 #### 2. A function that takes an array of strings, and returns a string that is all those strings concatenated together:
 
-  ##### Informal: 
+  ##### Informal pseudocode: 
   - Given a collection (Data Structure: array) of strings
   - Create a function that iterates over each element inside the collection (Loop)
   - The function should return 1 final string value which is the result of each string combined into one
   
-	##### Formal:
+	##### Formal pseudocode:
 	- START
 	- SET a variable that will be used to store the final value
 	- DEFINE a function combineStrings()
@@ -65,14 +69,18 @@ Programming language agnostic description / instructions for attempting to solve
 	```JavaScript
 	let arrayOfStrings = ["one", "two", "three", "four"];
 
-	let finalString = "";
+	function combineStrings (arrayOfStrings) {
+		let finalString = "";
 
-	arrayOfStrings.forEach((string)=>{
-		finalString += string;
-	});
+		arrayOfStrings.forEach((string)=>{
+			finalString += string;
+		});
 
-	console.log(finalString);
-	```
+	return finalString;
+	}
+
+	console.log(combineStrings(arrayOfStrings));
+```
 	
 <br>
 
@@ -81,6 +89,11 @@ Programming language agnostic description / instructions for attempting to solve
 ```JavaScript
 everyOther([1,4,7,2,5]); // => [1,7,5]
 ```
+
+##### Informal pseudocode: 
+
+
+
 
 <br>
 
