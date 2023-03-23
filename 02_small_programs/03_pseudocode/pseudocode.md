@@ -93,8 +93,45 @@ everyOther([1,4,7,2,5]); // => [1,7,5]
 
 ##### Informal pseudocode: 
 
+The question calls for a 'method' which is typically a function stored as a property value inside of an object's key/value pair sequence. I will assume for now that the term 'method' is this instance is a loose reference to a function definition/expression.
+
+- Create a function
+- INPUT: The function will receive an array full of integer elements
+- iterate over array elements and push every other element to new array
+- OUTPUT: return a new array from function
+- save new array and test result by logging contents of returned array
 
 ##### Formal pseudocode:
+
+- START
+- SET an array of integer elements: `let intArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];`
+- SET a `function everyOtherElement (intArray) {}` that accepts the array in the parameter value
+- READ and loop over the array elements in the function
+- increment the increment operator by +2 in the loop to read every other value e.g. 0, 2, 4, 6
+- SET an empty array
+- IF value at current index is 'every other' PUSH to empty array
+- return that new array
+- PRINT values in new array to confirm
+- END
+
+<br>
+
+##### Translating to code:
+
+```JavaScript
+console.log(everyOther([1,4,7,2,5])); // => [1,7,5]
+
+function everyOther (array) {
+
+	let newArray = [];
+
+	for (let i = 0; i < array.length; i = i + 2) {
+		newArray.push(array[i]);
+	}
+
+	return newArray
+}
+```
 
 <br>
 
