@@ -93,7 +93,7 @@ everyOther([1,4,7,2,5]); // => [1,7,5]
 
 ##### Informal pseudocode: 
 
-The question calls for a 'method' which is typically a function stored as a property value inside of an object's key/value pair sequence. I will assume for now that the term 'method' is this instance is a loose reference to a function definition/expression.
+The question calls for a 'method' which is typically a function stored as a property value inside of an object's key/value pair sequence. I will assume for now that the term 'method' in this instance is a loose reference to a function definition/expression.
 
 - Create a function
 - INPUT: The function will receive an array full of integer elements
