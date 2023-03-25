@@ -97,7 +97,7 @@ The question calls for a 'method' which is typically a function stored as a prop
 
 - Create a function
 - INPUT: The function will receive an array full of integer elements
-- iterate over array elements and push every other element to new array
+- iterate over array elements and push every other element to new array  
 - OUTPUT: return a new array from function
 - save new array and test result by logging contents of returned array
 
