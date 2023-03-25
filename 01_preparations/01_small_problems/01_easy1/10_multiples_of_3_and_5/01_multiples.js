@@ -11,7 +11,6 @@ function multisum (number) {
 		};
 	}
 	return sum;
-		
 }
 
 console.log(multisum(3));       // 3
