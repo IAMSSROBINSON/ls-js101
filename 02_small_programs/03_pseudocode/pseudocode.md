@@ -137,6 +137,63 @@ function everyOther (array) {
 
 #### 4. A function that determines the index of the 3rd occurrence of a given character in a string. For instance, if the given character is 'x' and the string is 'axbxcdxex', the function should return 6 (the index of the 3rd 'x'). If the given character does not occur at least 3 times, return null:
 
+/*
+
+Pseudocode:
+
+Informal:
+
+- given a string 
+- and a specified char
+- the function should work out the indexOf the third occurrence 
+- of the given char within the string
+- and return that index
+- if the char does not appear 3 or more times
+- return null
+
+INPUT: char string[] = "helloeveryone";
+INPUT: char character = 'e';
+OUTPUT: 7 (the third occurrence features at indexOf: 7)
+
+
+Formal:
+
+- START
+- SET a function thirdOccurrence(){}
+- PASS string, char to the function and receive as parameter values
+- DECLARE and SET a counter variable to 0;
+- LOOP over the string characters for string.length
+- IF current string character === char, count++
+- IF the count === 3, return index of current string character
+- When the loop completes, if count < 3, return null;
+- PRINT index returned (if any) at the function call;
+- END
+
+Code with intent:
+Convert to code
+
+```JavaScript
+function thirdOccurrence (string, char) {
+
+	let count = 0;
+
+	for (let i = 0; i < string.length; i++) {
+		if (string[i] === char){
+			count++;
+			if (count === 3) {
+				return i;
+			}
+		}
+	}
+	if (count < 3) {
+		return null;
+	}
+}
+
+console.log(thirdOccurrence("axbxcdxex", "x"));
+```
+*/
+
 <br>
 
 #### 5. A function that takes two arrays of numbers and returns the result of merging the arrays. The elements of the first array should become the elements at the even indexes of the returned array, while the elements of the second array should become the elements at the odd indexes. For instance:
