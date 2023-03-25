@@ -208,12 +208,61 @@ merge([1, 2, 3], [4, 5, 6]); // => [1, 4, 2, 5, 3, 6]
 Pseudocode
 Informal:
 
-INPUT:
-OUTPUT:
+INPUT: 2 arrays: [1, 2, 3], [4, 5, 6]
+OUTPUT: merged array values: [1, 4, 2, 5, 3, 6]
+
+Create a function that accepts two arrays.
+The function will return the result of merging the two arrays.
+The elements in array1 will be at even index positions in the newArray.
+the elements in array2 will be at odd index positions in the newArray.
+
+We can create an newEmptyArray and push values to it to populate it and merge the arrays.
+The firstArrayElements will be at newEmptyArrayIndex positions: 0, 2, 4
+The second will be at newEmptyArrayIndex positions: 1, 3, 5
+
+We will simply create a loop for the length of the first array seen as both arrays are the same length. Then we will push array1 element at index 0 and straight after will we push array2 element at index 0 and then continue the loop. This means the newArray will receive array1 element [0] at its position of [0] and then array2 element[0] at newArray[1] and so on as the loop continues. 
+
+newArray index:
+
+0: 1
+1: 4
+2: 2
+3: 5
+4: 3
+5: 6
 
 
 Formal:
 - START
+- SET a new function
+- receive 2 array as parameters
+- SET an empty array inside at the top level
+- Create a FOR loop at index = 0, for array1.length, index++
+- newArray.push array1[i], array2[i]
+  - array1[0], array2[0]
+  - array1[1], array2[1]
+  - array1[2], array2[2]
+
+- Layout:
+- newArray = [array1[0], array2[0], array1[1], array2[1], array1[2], array2[2]]
+- RETURN newArray;
+- PRINT newArray
 - END
 
+
+Convert to code with purpose:
+```JavaScript
+function merge (array1, array2) {
+
+	let newArray = [];
+
+	for (let i = 0; i < array1.length; i++) {
+		newArray.push(array1[i]);
+		newArray.push(array2[i]);
+}
+return newArray;
+}
+
+console.log(merge([1, 2, 3], [4, 5, 6])); // => [1, 4, 2, 5, 3, 6]
+```
 */
