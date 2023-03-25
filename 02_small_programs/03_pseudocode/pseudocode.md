@@ -191,6 +191,7 @@ function thirdOccurrence (string, char) {
 }
 
 console.log(thirdOccurrence("axbxcdxex", "x"));
+console.log(thirdOccurrence("axbxcde", "x"));
 ```
 */
 
