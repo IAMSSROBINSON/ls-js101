@@ -45,7 +45,7 @@ The eslint command accepts a JavaScript file as an argument e.g. `npx eslint fil
 ### Try it out
 
 - Create a file called `hello.js`
-- add this line to the file: `console.log(helloWorld);`
+- add this line to the file: `console.log(helloWorld)`
 - run the command: `npx eslint hello.js`
 
 <br> 
