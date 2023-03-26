@@ -266,3 +266,9 @@ return newArray;
 console.log(merge([1, 2, 3], [4, 5, 6])); // => [1, 4, 2, 5, 3, 6]
 ```
 */
+
+<br>
+
+## Sub-Process keyword in Pseudocode
+
+Consider using a SUBPROCESS keyword as part of the pseudocode format. This is to extract longer processes of code that will require more in-depth logic to solve and allows the scope of the pseudocode to stay narrow and focussed. 
