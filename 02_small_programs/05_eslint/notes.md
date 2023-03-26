@@ -78,15 +78,15 @@ Path and name of file that the command ran on:
 ```
 
 Shows error that ESlint found in the code:
-'helloWorld' undefined variable on line 1:column 13,
-Missing semicolon on line 1:column 24
+'helloWorld' undefined variable on line 1:column 13  
+Missing semicolon on line 1:column 24  
 Name of rules that apply to error: no-undef, semi 
 ``` 
 - 1:13  error  'helloWorld' is not defined  no-undef
 - 1:24  error  Missing semicolon            semi
 ```
 
-Stats about ESlint findings. 2 separate problems, both errors (not warnings). Suggestion to fix with: 'npx eslint --fix hello.js'  
+Stats about ESlint findings. 2 separate problems, both errors (not warnings).   Suggestion to fix with: 'npx eslint --fix hello.js'  
 ```
 - ✖ 2 problems (2 errors, 0 warnings)
   1 error and 0 warnings potentially fixable with the `--fix` option.
