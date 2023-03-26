@@ -1,6 +1,6 @@
-# Pseudocode
+d# Pseudocode
 
-Programming language agnostic description / instructions for attempting to solve a problem (this can be considered part of the 'PEDAC' process for solving problems, inclusive of the Data Structures & Algorithms sections).
+ Programming language agnostic description / instructions for attempting to solve a problem (this can be considered part of the 'PEDAC' process for solving problems, inclusive of the Data Structures & Algorithms sections).
 
 Informal pseudocode is a relaxed talk through of the logical instructions required to solve the problem.
 
