@@ -1,0 +1,2 @@
+// Further Exploration
+// What if we wanted generalize this function to a "power to the n" type function: cubed, to the 4th power, to the 5th, etc. How would we go about doing so while still using the multiply() function?
