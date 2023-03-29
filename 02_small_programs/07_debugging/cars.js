@@ -14,4 +14,4 @@ function getModel(newCar) {
 
 let [ make, model ] = car('Ford Mustang');
 console.log(make === 'Ford');   // => true
-console.log(model[0] === 'M');  // => TypeError: Cannot read property '0' of undefined => Fixed
+console.log(model[0] === 'M');  // => TypeError: Cannot read property '0' of undefined => Fixed => // true
