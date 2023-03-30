@@ -10,7 +10,7 @@ When the JavaScript interpreter stops running a program for a number of reasons 
 
 ### ReferenceError
 
-- Occurs when attempt to use a function or variable that does not exist.
+- occurs when attempting to use a function or variable that does not exist.
 
 <br>
 
