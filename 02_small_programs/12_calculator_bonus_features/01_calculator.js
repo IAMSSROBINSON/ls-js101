@@ -69,11 +69,17 @@ function invalidNumber(number) {
   prompt("Do you want to perform new calculation?\n1: yes\n2: no");
   answer = +READLINE.prompt();
 
+  while (![1, 2].includes(answer)) {
+    prompt(`Invalid number. You must choose 1: for yes or, 2: for no `);
+    answer = +READLINE.question();
+  }
+
+
   switch(answer) {
     case 1:
       intro();
       break;
     case 2: 
-    break;
+      break;
   }
 })();
