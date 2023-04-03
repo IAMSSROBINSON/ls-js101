@@ -2,6 +2,7 @@
 
 const READLINE = require("readline-sync");
 
+
 function prompt(msg) {
   console.log(`\n=> ${msg}`);
 }
