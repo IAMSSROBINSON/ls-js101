@@ -20,6 +20,10 @@ E:
 - No
   - End of program.
 - Yes
+  result = 0 or undefined;
+  number1 = 0 or undefined;
+  number2 = 0 or undefined;
+
   => Enter number 1
   => Enter number 2
   => Choose operator
@@ -30,4 +34,14 @@ D:
 
 A:
 - START
-- SET an intro function 
+- SET self invoking (intro(){})() function as program starts
+- PERFORM normal flow of program
+- IF operation on 2 numbers is complete
+- PROMPT user: Do you want to perform a new calculation?
+  - SET new variable to save answer
+  - 1: yes, 2: no (edge cases for other numbers entered and also alpha chars)
+  - IF answer === yes
+    - SET num1, num2, result = 0 
+    - CALL intro()
+  - ELSE IF no
+    - END
