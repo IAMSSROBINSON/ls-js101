@@ -1,0 +1,6 @@
+{
+  "intro" : "Welcome to the Calculator!",
+  "firstNumber" : "Please enter first number: ",
+  "secondNumber" : "Please enter second number: ",
+  "invalidNumber" : "Invalid number. Enter number value: "
+}

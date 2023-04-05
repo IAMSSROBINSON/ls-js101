@@ -1,6 +1,9 @@
+/* eslint-disable max-statements */
 // Refactoring Calculator
 
 const READLINE = require("readline-sync");
+const dataMessages = require("./calculator_messages.json");
+
 
 function prompt(msg) {
   console.log(`\n=> ${msg}`);
@@ -11,21 +14,21 @@ function invalidNumber(number) {
 }
 
 (function intro() {
-  prompt("Welcome to the Calculator!");
+  prompt(`${dataMessages['intro']}`);
 
-  prompt("Please enter first number: ");
+  prompt(`${dataMessages['firstNumber']}`);
   let number1 = READLINE.question();
 
   while (invalidNumber(number1)) {
-    prompt("Invalid number. Enter number value: ");
+    prompt(`${dataMessages['invalidNumber']}`);
     number1 = READLINE.question();
   }
 
-  prompt("Please enter second number: ");
+  prompt(`${dataMessages['secondNumber']}`);
   let number2 = READLINE.question();
 
   while (invalidNumber(number2)) {
-    prompt(`Invalid number. Enter number value: `);
+    prompt(`${dataMessages['invalidNumber']}`);
     number2 = READLINE.question();
   }
 
@@ -63,7 +66,6 @@ function invalidNumber(number) {
   }
 
   prompt(`The result is ${output}\n`);
-  
 
   let answer;
   prompt("Do you want to perform new calculation?\n1: yes\n2: no");
@@ -74,12 +76,29 @@ function invalidNumber(number) {
     answer = +READLINE.question();
   }
 
-
-  switch(answer) {
+  switch (answer) {
     case 1:
       intro();
       break;
-    case 2: 
+    case 2:
       break;
   }
 })();
+
+
+/*
+
+Extract messages to json file:
+
+decide which messages need extracting and make a list
+  - start with 1 and test each as they work
+
+create file: calculator_messages.json
+  construct json object:
+    "keys" are messageName strings : values are message strings where required
+
+in js file: let message = require("./calculator_messages.json")
+
+access object values via key name and use messages as required
+
+*/
