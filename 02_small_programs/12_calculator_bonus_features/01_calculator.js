@@ -1,4 +1,4 @@
-// Refactoring Calculator
+// Original Calculator
 
 const READLINE = require("readline-sync");
 
