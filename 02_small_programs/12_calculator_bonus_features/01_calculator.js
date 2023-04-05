@@ -91,6 +91,9 @@ function messages (message, lang = LANGUAGE) {
   }
 })();
 
+
+
+
 /*
 
 Extract messages to json file:
