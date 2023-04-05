@@ -2,8 +2,9 @@
 // Refactoring Calculator
 
 const READLINE = require("readline-sync");
-const dataMessages = require("./calculator_messages.json");
-
+const DATAMESSAGES = require("./calculator_messages.json");
+const LANGUAGE = "en";
+// console.log(DATAMESSAGES);
 
 function prompt(msg) {
   console.log(`\n=> ${msg}`);
@@ -13,22 +14,26 @@ function invalidNumber(number) {
   return number.trimStart() === "" || Number.isNaN(Number(number));
 }
 
-(function intro() {
-  prompt(`${dataMessages['intro']}`);
+function messages (message, lang = LANGUAGE) {
+  return DATAMESSAGES[lang][message];
+}
 
-  prompt(`${dataMessages['firstNumber']}`);
+(function intro() {
+  prompt(messages("intro", LANGUAGE));
+
+  prompt(`${messages("firstNumber", LANGUAGE)}`);
   let number1 = READLINE.question();
 
   while (invalidNumber(number1)) {
-    prompt(`${dataMessages['invalidNumber']}`);
+    prompt(`${messages("invalidNumber", LANGUAGE)}`);
     number1 = READLINE.question();
   }
 
-  prompt(`${dataMessages['secondNumber']}`);
+  prompt(`${messages("secondNumber", LANGUAGE)}`);
   let number2 = READLINE.question();
 
   while (invalidNumber(number2)) {
-    prompt(`${dataMessages['invalidNumber']}`);
+    prompt(`${messages("invalidNumber", LANGUAGE)}`);
     number2 = READLINE.question();
   }
 
@@ -85,7 +90,6 @@ function invalidNumber(number) {
   }
 })();
 
-
 /*
 
 Extract messages to json file:
@@ -101,4 +105,29 @@ in js file: let message = require("./calculator_messages.json")
 
 access object values via key name and use messages as required
 
+*/
+
+/*
+
+Internationalization:
+
+Allow the messages to be read by users of a different language
+  - identify by ISO language country code: en, es
+  - leave key the same but translate the value in json file
+  - inside an object {}
+    - nest messages under top level country "key": {"value", "value"}
+      - repeat for each country translation:
+      {
+        "en" : {
+          // "messageValuesHere"
+        },
+        "es" : {
+          // "messageValuesHere"
+        }
+      }
+  - change the way the messages are accessed in program considering country key
+
+  - move this functionality to a function:
+      - function takes: message, lang (default lang="en")
+        - lang first required to get the message in that language
 */

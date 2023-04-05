@@ -1,6 +1,16 @@
 {
-  "intro" : "Welcome to the Calculator!",
-  "firstNumber" : "Please enter first number: ",
-  "secondNumber" : "Please enter second number: ",
-  "invalidNumber" : "Invalid number. Enter number value: "
+  "en" : {
+    "intro" : "Welcome to the Calculator!",
+    "firstNumber" : "Please enter first number: ",
+    "secondNumber" : "Please enter second number: ",
+    "invalidNumber" : "Invalid number. Enter number value: "
+  },
+
+  "es" : {
+    "intro" : "¡Bienvenido a la Calculadora!",
+    "firstNumber" : "Por favor ingrese el primer número: ",
+    "secondNumber" : "Por favor ingrese el segundo número: ",
+    "invalidNumber" : "Número invalido. Introduzca el valor del número: "
+    }
+
 }
