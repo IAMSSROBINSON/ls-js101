@@ -48,7 +48,7 @@ Type coercion is the conversion of one data type value to another.
 - used on booleans it will return 'true' or 'false' strings e.g. true.toString() returns 'true' and likewise for false.toString()
 - array.toString(); concatenated all elements in the array separated by comma(,)
   - treats null and undefined as empty values 
-- using toString() on an object is useless
+- using toString() on an object returns '[object Object]'
 
 <br>
 
@@ -58,11 +58,59 @@ Type coercion is the conversion of one data type value to another.
 - however returns null and undefined into their namesakes string values
 
 <br>
+<br>
 
 ### Implicit
 
+Performing an operation with two different value types and JavaScript coerces the values to have the same type to perform the operation.
+
 <br>
 
-##### ${Template literals}
+### == non-strict equality operator
+
+- coerces a string type to number type to compare operate on two numbers e.g. '1' == 1 => true
+- when comparing booleans to numbers the boolean value is coerced to its number equivalent: true(1), false(0)
+- comparing string to boolean: both will convert to numbers where possible
+- undefined and null are compared as equal
+
+<br>
+  
+### == non-strict equality operator on objects
+
+- considers objects to be equal only if they are the same object 
+- tries to coerce objects to primitives where possible
+
+<br>
+
+### other
+
+- when ever 1 of 2 operands of the + operator are strings, the other will be coerced to a string (as in the case with concatenation of a number to a string value to become a combined string)
+
+- when both operands are a combination of numbers, booleans, nulls or undefined they are converted to numbers and added together.
+
+- when one operand is an object both operands are converted to strings and concatenated
+
+
+<br>
+
+### ${Template literals}
 
 - Inside template literals JavaScript implicitly coerces interpolation expressions to string values.
+
+<br>
+
+### Relational Operators
+
+<, >, <=, >= are for number (numeric comparison) and string comparisons (lexicographic comparison). 
+
+``` JavaScript
+1 < 2 // true
+'b' > 'a' // true
+```
+
+when both operands are strings JavaScript compares them lexicographic otherwise JavaScript converts them to a number before comparing them.
+
+<br>
+
+- always use explicit type coercion (do not use String() & toString() inside ${template literals})
+- always use strict equality (===, !==)
