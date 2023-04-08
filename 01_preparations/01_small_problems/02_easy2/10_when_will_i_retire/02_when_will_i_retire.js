@@ -23,7 +23,7 @@ function getRetirementYear(age, retireAge) {
   try {
     currentYear = Date().getFullYear();
   } catch(e){
-    console.log(`errorName:, ${e.name},errorMessage:  ${e.message}`);
+    console.log(`\nerrorName:, ${e.name},\nerrorMessage:  ${e.message}`);
     currentYear = 2017;
   }
   
