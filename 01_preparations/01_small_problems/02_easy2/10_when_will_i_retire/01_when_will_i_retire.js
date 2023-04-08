@@ -84,7 +84,7 @@ let currentAge;
 let retirementAge;
 
 function prompter(msg) {
-  console.log(`\n=> ${msg}`);
+  return console.log(`\n=> ${msg}`);
 }
 
 function getRetirementYear(age, retireAge) {
