@@ -12,16 +12,23 @@ const READLINESYNC = require('readline-sync');
 
 let currentAge;
 let retirementAge;
+let currentYear;
 
 function prompter(msg) {
   return console.log(`\n=> ${msg}`);
 }
 
 function getRetirementYear(age, retireAge) {
-  const difference = Number(retireAge) - Number(age);
-  const currentYear = Date().getFullYear();
-  const yearsToGo = difference;
-  const retirementYear = currentYear + difference;
+   let difference = Number(retireAge) - Number(age);
+  try {
+    currentYear = Date().getFullYear();
+  } catch(e){
+    console.log(`errorName:, ${e.name},errorMessage:  ${e.message}`);
+    currentYear = 2017;
+  }
+  
+  let yearsToGo = difference;
+  let retirementYear = currentYear + difference;
 
   return (`It's ${currentYear}. You will retire in ${retirementYear}. \nYou have only ${yearsToGo} years of work to go!`);
 }
