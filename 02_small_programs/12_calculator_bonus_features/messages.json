@@ -1,0 +1,39 @@
+{
+  "en": {
+    "intro": "Welcome To The Calculator!",
+    "firstNumber": "Please enter your first number:",
+    "secondNumber": "Please enter your second number:",
+    "invalidEntry": "Invalid entry! Please enter a number:",
+    "operator": "Please select an operator:",
+    "addition": "1: +  Addition",
+    "subtraction": "2: -  Subtraction",
+    "multiplication": "3: *  Multiplication",
+    "quotient": "4: /  Quotient",
+    "modulus": "5: %  Modulus",
+    "exponentiation": "6: ** Exponentiation",
+    "quit": "7: Quit program",
+    "eop": "Thanks for using The Calculator!\nEnd of program.",
+    "new": "Would you like to perform a new calculation? 'yes' or 'no?'",
+    "yesNo": "Invalid entry!\nPlease type: 'yes' or 'no?'",
+    "selectLang" : "Please select your language:\n1: English\n2: Korean"
+  },
+  
+  "kr": {
+    "intro": "계산기에 오신 것을 환영합니다!",
+    "firstNumber": "첫 번째 숫자를 입력하세요:",
+    "secondNumber": "두 번째 숫자를 입력하세요:",
+    "invalidEntry": "잘못된 입력입니다! 숫자를 입력해주세요:",
+    "operator": "연산자를 선택하세요:",
+    "addition": "1: + 덧셈",
+    "subtraction": "2: - 뺄셈",
+    "multiplication": "3: * 곱셈",
+    "quotient": "4: / 나눗셈",
+    "modulus": "5: % 나머지",
+    "exponentiation": "6: ** 거듭제곱",
+    "quit": "7: 프로그램 종료",
+    "eop": "계산기를 이용해 주셔서 감사합니다!\n프로그램을 종료합니다.",
+    "new": "새로운 계산을 하시겠습니까? 'yes' 또는 'no'로 대답해주세요.",
+    "yesNo": "잘못된 입력입니다!\n'yes' 또는 'no'로 대답해주세요.",
+    "selectLang" : "언어를 선택해주세요:\n1: 영어\n2: 한국어"
+  }
+}
