@@ -119,7 +119,6 @@ while (setNewCalculation === true) {
   }
 
   newCalculationAnswer = newCalculationAnswer[0].toLowerCase();
-  console.log("newCalculationAnswer", newCalculationAnswer);
 
   switch (newCalculationAnswer) {
     case 'y':
