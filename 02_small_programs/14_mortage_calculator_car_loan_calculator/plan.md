@@ -50,10 +50,26 @@ const MONTHLY_REPAYMENT = loanAmount *(MONTHLY_INTEREST_RATE_DECIMAL / (1 - Math
 
 const TOTAL_AMOUNT_REPAYABLE = MONTHLY_REPAYMENT * LOAN_DURATION_IN_MONTHS;
 
-console.log(TOTAL_AMOUNT_REPAYABLE); // OUTPUT: 11054.06091391036
+console.log(TOTAL_AMOUNT_REPAYABLE.toFixed(2)); // OUTPUT: 11163.11
 
-console.log(MONTHLY_REPAYMENT); // OUTPUT: 230.29293570646584
+console.log(MONTHLY_REPAYMENT.toFixed(2)); // OUTPUT: 232.56
 ```
+
+<br>
+
+##### EDGE CASES
+
+OUTPUT: 
+The outputs should be expressed as a $ amount with symbols e.g. 
+`$(Math.round(230.29293570646584).toFixed(2) // $230.00`
+
+INPUT: apr 
+The user should input a whole number
+If the user enters a decimal by accident instead of a whole number should the program validate this? e.g.
+`if (apr % 2 !== 0){ // then ask the user to enter a whole number}`
+- Interest rates are not always whole numbers however so should the program account for decimal interest rates instead? e.g. 5.5% apr
+- Perhaps it doesn't matter whether it is a whole number or decimal as calculations will be successful either way
+
 
 <br>
 
