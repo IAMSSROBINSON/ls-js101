@@ -21,7 +21,12 @@ Take everything that you've learned so far and build a mortgage calculator (or c
 
 ### Mortgage Calculator Formula
 
-Translated to JavaScript, the formula looks like this:  
+Translated to JavaScript, the formula looks like this: 
+
+let j = 0.05;
+let n = 48
+let p = 10000;
+let m;
 
 let m = p * (j / (1 - Math.pow((1 + j), (-n))));
 m = monthly payment
