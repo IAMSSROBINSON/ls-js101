@@ -23,6 +23,7 @@ function notPositiveIntValueValidation (value) {
 // declare variables
 let loanAmount; // INPUT
 let loanDurationInYears; // INPUT
+let annualRateOfInterest; // INPUT
 
 
 // ---------------------------------------------------------------------------
@@ -48,3 +49,11 @@ while (notPositiveIntValueValidation(loanDurationInYears)) {
   loanDurationInYears = +READLINE_SYNC.prompt();
 }
 
+// get annual rate of interest
+printer(MESSAGES['annualRateOfInterest']);
+annualRateOfInterest = +READLINE_SYNC.prompt();
+
+while (notPositiveIntValueValidation(annualRateOfInterest)) {
+  printer(MESSAGES['valueErrorValidation']);
+  annualRateOfInterest = +READLINE_SYNC.prompt();
+}
