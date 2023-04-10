@@ -22,4 +22,28 @@ The program will calculate how much the user must pay back in interest each mont
 
 The program will calculate the total amount repayable by the end of the loan including interest
 
+<br>
+
+E:
+
+Translated to JavaScript, the formula with example inputs for data looks like this: 
+<br>
+
+```JavaScript
+let apr = 5; // userInput
+const APRDECIMAL = apr / 100; // annual percentage rate of interest expressed as a decimal number to use for calculations on values
+
+const MONTHSINYEAR = 12;
+const MONTHLYINTERESTRATEDECIMAL = APRDECIMAL / MONTHSINYEAR;
+
+let loanDurationInYears = 4; // userInput
+const LOANDURATIONINMONTHS = loanDurationInYears * MONTHSINYEAR;
+
+let loanAmount = 10000; // userInput
+
+const MONTHTLYREPAYMENT = loanAmount *(MONTHLYINTERESTRATEDECIMAL / (1 - Math.pow((1 + MONTHLYINTERESTRATEDECIMAL), (- LOANDURATIONINMONTHS))));
+
+console.log(MONTHTLYREPAYMENT); // 230.29293570646584
+```
+
 
