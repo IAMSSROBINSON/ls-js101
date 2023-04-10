@@ -69,6 +69,15 @@ If the user enters a decimal by accident instead of a whole number should the pr
 `if (apr % 1 !== 0){ // then ask the user to enter a whole number}`
 - Interest rates are not always whole numbers however so should the program account for decimal interest rates instead? e.g. 5.5% apr
 - Perhaps it doesn't matter whether it is a whole number or decimal as calculations will be successful either way
+- input should be validated for Number status: e.g. if (type of apr !== 'number`), make sure input is taken as a Number and not String or coerce
+- input should not be a negative number: e.g.  Math.abs(apr)
+- What if 0% interested is chosen? Should 0% interest be allowed on loans equal to 1 year / 12 months or less? 
+  - if this is the case and 1 year is chosen as an input then the program should not then ask for the interest rate input and should auto input 0% ?
+
+INPUT: loanDuration
+The user will be asked how many years they want to take to repay the loan: should this be open ended or a selection with min and max years shown? Should the input be in months instead? - this will alter the formula!
+- if max then this will need to be validated to make sure it is not greater than the maximum value
+- if min then this will need to be validated to make sure it is not less than the minimum value
 
 
 <br>
