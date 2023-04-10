@@ -66,7 +66,7 @@ The outputs should be expressed as a $ amount with symbols e.g.
 INPUT: apr 
 The user should input a whole number
 If the user enters a decimal by accident instead of a whole number should the program validate this? e.g.
-`if (apr % 2 !== 0){ // then ask the user to enter a whole number}`
+`if (apr % 1 !== 0){ // then ask the user to enter a whole number}`
 - Interest rates are not always whole numbers however so should the program account for decimal interest rates instead? e.g. 5.5% apr
 - Perhaps it doesn't matter whether it is a whole number or decimal as calculations will be successful either way
 
