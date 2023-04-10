@@ -1,13 +1,19 @@
 # Car Loan Calculator 
 
+A program informing users how much monthly repayments will be on a loan for a car.
+
+<br>
+
 ## Plan
 
 <br>
 
 ### PEDAC
+A system for solving problems:
 
-#### P:
+<br>
 
+#### P: Problem
 The program should allow the user to enter an amount they wish to loan e.g. 10000 / $10,000  
 
 The user should be able to enter an annual rate of percentage (APR) e.g. 5 / 5%  
@@ -24,8 +30,7 @@ The program will calculate the total amount repayable by the end of the loan inc
 
 <br>
 
-E:
-
+#### E: Examples
 Translated to JavaScript, the formula with example inputs for data looks like this: 
 <br>
 
@@ -52,7 +57,24 @@ console.log(MONTHLY_REPAYMENT); // OUTPUT: 230.29293570646584
 
 <br>
 
-D:
+#### D: Data Structure
 Data from user inputs will be stored in variables. 
 Interest rates will be taken as whole numbers and converted by the program to decimal. Validation will need to be performed incase 
 
+<br>
+
+#### A: Algorithm
+Pseudocode:
+Informal:
+
+
+
+Formal:
+
+
+
+Flowchart:
+
+<br>
+
+#### C: Convert to code with purpose
