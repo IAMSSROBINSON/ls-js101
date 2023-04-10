@@ -1,3 +1,5 @@
 {
-  "introduction" : "Welcome To The Car Loan Calculator" 
+  "introduction" : "Welcome To The Car Loan Calculator", 
+  "loanAmount" : "Enter loan amount:",
+  "loanAmountErrorValidation" : "Please enter loan amount as a whole number!"
 }

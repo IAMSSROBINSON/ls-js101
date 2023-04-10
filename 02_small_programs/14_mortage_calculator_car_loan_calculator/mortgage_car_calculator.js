@@ -21,11 +21,11 @@ let loanAmount; // INPUT
 // FUNCTION INVOCATIONS
 printer(MESSAGES['introduction']);
 
-printer("Enter loan amount:");
+printer(MESSAGES['loanAmount']);
 loanAmount = +READLINE_SYNC.prompt();
 
 while (notPositiveIntValueValidation(loanAmount)) {
-  printer("Please enter loan amount as a whole number:");
+  printer(MESSAGES['loanAmountErrorValidation']);
   loanAmount = +READLINE_SYNC.prompt();
 }
 
