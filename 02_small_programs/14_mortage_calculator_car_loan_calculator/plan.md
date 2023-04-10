@@ -146,6 +146,8 @@ END
 
 Flowchart:
 
+![Car Loan Calculator Flowchart](car_loan_calculator_flowchart.png)
+
 <br>
 
 #### C: Convert to code with purpose
