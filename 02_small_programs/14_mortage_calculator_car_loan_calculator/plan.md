@@ -110,6 +110,7 @@ Informal:
 - the total amount to be repaid can be displayed
 - the user will be asked if they want to calculate a new repayment plan
 - if yes reset the program and introduce the calculator again
+  - validate response
 - if no then end of program
 
 <br>
