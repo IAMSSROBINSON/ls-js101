@@ -38,11 +38,11 @@ Translated to JavaScript, the formula with example inputs for data looks like th
 let apr = 5; // INPUT
 const APR_DECIMAL = apr / 100; // annual percentage rate of interest expressed as a decimal number to use for calculations on values
 
-const MONTHS_IN_YEAR = 12;
-const MONTHLY_INTEREST_RATE_DECIMAL = APR_DECIMAL / MONTHS_IN_YEAR;
+const MONTHS_IN_ONE_YEAR = 12;
+const MONTHLY_INTEREST_RATE_DECIMAL = APR_DECIMAL / MONTHS_IN_ONE_YEAR;
 
 let loanDurationInYears = 4; // INPUT
-const LOAN_DURATION_IN_MONTHS = loanDurationInYears * MONTHS_IN_YEAR;
+const LOAN_DURATION_IN_MONTHS = loanDurationInYears * MONTHS_IN_ONE_YEAR;
 
 let loanAmount = 10000; // INPUT
 

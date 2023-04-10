@@ -5,7 +5,7 @@
   "loanDurationInYears" : "Please enter loan duration in years: ", 
   "annualRateOfInterest" : "Please enter annual rate of interest: ",
   "loanAmount_output" : "Loan amount: ",
-  "loanDurationInYears_output" : "Loan duration in years: ",
+  "loanDurationInYears_output" : "Loan duration: ",
   "annualRateOfInterest_output" : "APR: ", 
   "monthlyRepayment_output" : "Monthly repayment: ",
   "totalAmountRepayable_output" : "Total amount repayable: "

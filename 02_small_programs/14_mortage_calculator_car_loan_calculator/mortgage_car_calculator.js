@@ -26,14 +26,19 @@ function toCurrency (value) {
   }).format(`${value}`);
 }
 
-
 // ---------------------------------------------------------------------------
 
 // declare variables
+const MONTHS_IN_ONE_YEAR = 12;
+
 let loanAmount; // INPUT
 let loanDurationInYears; // INPUT
 let annualRateOfInterest; // INPUT
-
+let aprDecimal;
+let monthlyInterestRateDecimal;
+let loanDurationInMonths;
+let monthlyRepayment;
+let totalAmountRepayable;
 
 // ---------------------------------------------------------------------------
 
@@ -67,5 +72,22 @@ while (notPositiveIntValueValidation(annualRateOfInterest)) {
   annualRateOfInterest = +READLINE_SYNC.prompt();
 }
 
-// print values
+// initialize variables expressions
+aprDecimal = annualRateOfInterest / 100;
+
+monthlyInterestRateDecimal = aprDecimal / MONTHS_IN_ONE_YEAR;
+
+loanDurationInMonths = loanDurationInYears * MONTHS_IN_ONE_YEAR;
+
+monthlyRepayment = loanAmount * (monthlyInterestRateDecimal / (1 - Math.pow((1 + monthlyInterestRateDecimal), (-loanDurationInMonths)))); // OUTPUT
+
+totalAmountRepayable = monthlyRepayment * loanDurationInMonths;
+
+// output: print values
 printer(MESSAGES['loanAmount_output'] + `${toCurrency(loanAmount)}`);
+printer(MESSAGES['loanDurationInYears_output'] + `${loanDurationInYears} years`);
+printer(MESSAGES['annualRateOfInterest_output'] + `${annualRateOfInterest}%`);
+printer(MESSAGES['monthlyRepayment_output'] + `${toCurrency(monthlyRepayment)}`);
+printer(MESSAGES['totalAmountRepayable_output'] + `${toCurrency(totalAmountRepayable)}`);
+
+
