@@ -61,7 +61,7 @@ console.log(MONTHLY_REPAYMENT.toFixed(2)); // OUTPUT: 232.56
 
 OUTPUT: 
 The outputs should be expressed as a $ amount with symbols e.g. 
-`$(Math.round(230.29293570646584).toFixed(2) // $230.00`
+`$(230.29293570646584).toFixed(2) // $230.29`
 
 INPUT: apr 
 The user should input a whole number
@@ -69,7 +69,7 @@ If the user enters a decimal by accident instead of a whole number should the pr
 `if (apr % 1 !== 0){ // then ask the user to enter a whole number}`
 - Interest rates are not always whole numbers however so should the program account for decimal interest rates instead? e.g. 5.5% apr
 - Perhaps it doesn't matter whether it is a whole number or decimal as calculations will be successful either way
-- input should be validated for Number status: e.g. if (type of apr !== 'number`), make sure input is taken as a Number and not String or coerce
+- input should be validated for Number status: e.g. if (type of apr !== 'number`), make sure input is taken as a Number and not String or coerce because if validating for empty string also then variableName.trim() method only works on string values
 - input should not be a negative number: e.g.  Math.abs(apr)
 - What if 0% interested is chosen? Should 0% interest be allowed on loans equal to 1 year / 12 months or less? 
   - if this is the case and 1 year is chosen as an input then the program should not then ask for the interest rate input and should auto input 0% ?
