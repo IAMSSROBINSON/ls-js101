@@ -30,20 +30,29 @@ Translated to JavaScript, the formula with example inputs for data looks like th
 <br>
 
 ```JavaScript
-let apr = 5; // userInput
-const APRDECIMAL = apr / 100; // annual percentage rate of interest expressed as a decimal number to use for calculations on values
+let apr = 5; // INPUT
+const APR_DECIMAL = apr / 100; // annual percentage rate of interest expressed as a decimal number to use for calculations on values
 
-const MONTHSINYEAR = 12;
-const MONTHLYINTERESTRATEDECIMAL = APRDECIMAL / MONTHSINYEAR;
+const MONTHS_IN_YEAR = 12;
+const MONTHLY_INTEREST_RATE_DECIMAL = APR_DECIMAL / MONTHS_IN_YEAR;
 
-let loanDurationInYears = 4; // userInput
-const LOANDURATIONINMONTHS = loanDurationInYears * MONTHSINYEAR;
+let loanDurationInYears = 4; // INPUT
+const LOAN_DURATION_IN_MONTHS = loanDurationInYears * MONTHS_IN_YEAR;
 
-let loanAmount = 10000; // userInput
+let loanAmount = 10000; // INPUT
 
-const MONTHTLYREPAYMENT = loanAmount *(MONTHLYINTERESTRATEDECIMAL / (1 - Math.pow((1 + MONTHLYINTERESTRATEDECIMAL), (- LOANDURATIONINMONTHS))));
+const MONTHLY_REPAYMENT = loanAmount *(MONTHLY_INTEREST_RATE_DECIMAL / (1 - Math.pow((1 + MONTHLY_INTEREST_RATE_DECIMAL), (- LOAN_DURATION_IN_MONTHS)))); // OUTPUT
 
-console.log(MONTHTLYREPAYMENT); // 230.29293570646584
+const TOTAL_AMOUNT_REPAYABLE = MONTHLY_REPAYMENT * LOAN_DURATION_IN_MONTHS;
+
+console.log(TOTAL_AMOUNT_REPAYABLE);
+
+console.log(MONTHLY_REPAYMENT); // OUTPUT: 230.29293570646584
 ```
 
+<br>
+
+D:
+Data from user inputs will be stored in variables. 
+Interest rates will be taken as whole numbers and converted by the program to decimal. Validation will need to be performed incase 
 
