@@ -57,7 +57,7 @@ console.log(MONTHLY_REPAYMENT.toFixed(2)); // OUTPUT: 232.56
 
 <br>
 
-##### EDGE CASES
+##### EDGE CASES  
 
 OUTPUT: 
 The outputs should be expressed as a $ amount with symbols e.g. 
@@ -91,10 +91,31 @@ Modular / Functional programming principles will construct the flow of the progr
 #### A: Algorithm
 Pseudocode:
 Informal:
+- The program will print a welcome message welcoming the user to the Car Loan Calculator.
+- The first question will prompt the user to ask how much they would like to loan?
+  - this should be a positive number integer > 0
+  - this should be below an upper limit? 
+  - this should not be an empty entry
+  - if entry is invalid then prompt for correct response again
+- the second question will prompt the user to enter the duration in years to repay the loan
+  - same validation as above but change parameters if required e.g. the max amount of years allowed
+  - minimum loan duration = 1 year
+- the third prompt will ask the user the annual rate of interest expressed as a whole number percentage e.g 5 for 5%
+  - must be integer
+  - must be whole number
+  - must not be empty entry
+  - must be greater than or equal to 0
+- the monthly repayment amount will be calculated and displayed to the user
+- the total loan amount can be displayed
+- the total amount to be repaid can be displayed
+- the user will be asked if they want to calculate a new repayment plan
+- if yes reset the program and introduce the calculator again
+- if no then end of program
 
-
+<br>
 
 Formal:
+
 
 
 
