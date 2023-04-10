@@ -18,6 +18,15 @@ function notPositiveIntValueValidation (value) {
   return value <= 0 || Number.isNaN(Number(value)) || String(value).trimStart() === "" || Object.is(value, -0);
 }
 
+// convert loan amount to currency value
+function toCurrency (value) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD"
+  }).format(`${value}`);
+}
+
+
 // ---------------------------------------------------------------------------
 
 // declare variables
@@ -57,3 +66,6 @@ while (notPositiveIntValueValidation(annualRateOfInterest)) {
   printer(MESSAGES['valueErrorValidation']);
   annualRateOfInterest = +READLINE_SYNC.prompt();
 }
+
+// print values
+printer(MESSAGES['loanAmount_output'] + `${toCurrency(loanAmount)}`);
