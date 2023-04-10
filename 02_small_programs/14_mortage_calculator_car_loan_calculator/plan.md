@@ -84,7 +84,7 @@ The user will be asked how many years they want to take to repay the loan: shoul
 
 #### D: Data Structure
 Data from user inputs will be stored in variables. 
-Interest rates will be taken as whole numbers and converted by the program to decimal. Validation will need to be performed incase 
+Modular / Functional programming principles will construct the flow of the program.
 
 <br>
 
