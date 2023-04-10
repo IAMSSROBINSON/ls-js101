@@ -11,7 +11,7 @@ function printer (message) {
 }
 
 // performs validation checks
-function positiveIntValue (value) {
+function notPositiveIntValueValidation (value) {
   return value <= 0 || Number.isNaN(Number(value)) || String(value).trimStart() === "" || Object.is(value, -0);
 }
 
@@ -24,7 +24,7 @@ printer(MESSAGES['introduction']);
 printer("Enter loan amount:");
 loanAmount = +READLINE_SYNC.prompt();
 
-while (positiveIntValue(loanAmount)) {
+while (notPositiveIntValueValidation(loanAmount)) {
   printer("Please enter loan amount as a whole number:");
   loanAmount = +READLINE_SYNC.prompt();
 }
