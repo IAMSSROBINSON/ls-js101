@@ -15,7 +15,7 @@ let loanAmt; // INPUT, OUTPUT
 let loanDurationInYears; // INPUT, OUTPUT
 let annualRateOfInterest; // INPUT, OUTPUT
 let aprDecimal;
-let IntPerM;
+let intPerM;
 let loanMnths;
 let repayPerM; // OUTPUT
 let totalAmountRepayable; // OUTPUT
@@ -87,11 +87,11 @@ while (setNewCalculation === true) {
   // initialize variables expressions
   aprDecimal = annualRateOfInterest / 100;
 
-  IntPerM = aprDecimal / MONTHS_IN_ONE_YEAR;
+  intPerM = aprDecimal / MONTHS_IN_ONE_YEAR;
 
   loanMnths = loanDurationInYears * MONTHS_IN_ONE_YEAR;
 
-  repayPerM = loanAmt * (IntPerM / (1 - Math.pow((1 + IntPerM), (-loanMnths))));
+  repayPerM = loanAmt * (intPerM / (1 - Math.pow((1 + intPerM), (-loanMnths))));
 
   totalAmountRepayable = repayPerM * loanMnths;
 
