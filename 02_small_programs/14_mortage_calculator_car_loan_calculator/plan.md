@@ -116,7 +116,32 @@ Informal:
 
 Formal:
 
+START
+- SET and PRINT function welcome(){} to introduce user to the loan calculator
+  - SET prompter function(message){} to print messages to the console prefixed with `=>` to greater distinguish questions / prompts from user responses
+- SET a variable loanAmount
+- PROMPT user for loanAmount and assign to variable
+  - PERFORM validation function for each validation requirement
+  
+- SET a variable loanDurationInYears and assign to variable
+- PROMPT user for loanDurationInYears and assign to variable
+  - PERFORM validation functions for each validation requirement
+  
+- SET a variable annualRateOfInterest / apr
+- PROMPT user for annualRateOfInterest and assign to variable
+  - PERFORM validation functions for each validation requirement
 
+- PRINT
+  - loanAmount in dollars: $(10.000.00).toFixed(2)
+  - loanDurationInYears: 4
+  - apr: 5%
+  - MONTHLY_REPAYMENT in dollars: $232.56
+  - TOTAL_AMOUNT_REPAYABLE in $
+- PROMPT user if they would like to perform a new calculation
+- IF 
+  - SET answer variable .toLowerCase() === "yes" or 'y' RUN program again
+  - ELSE IF answer variable .toLowerCase() === "no" or'n' then end the program
+END
 
 
 Flowchart:
