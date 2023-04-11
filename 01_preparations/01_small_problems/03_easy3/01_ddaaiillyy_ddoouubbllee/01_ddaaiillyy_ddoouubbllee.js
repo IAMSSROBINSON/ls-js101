@@ -10,9 +10,9 @@ if (string.trimStart() === "" || string.length === 1 || typeof string !== 'strin
 
 newString.push(string[0]);
 
-for (let i = 0; i < string.length; i++) {
-  if (string[i] !==  newString[newString.length-1]) {
-    newString.push(string[i]);
+for (let index = 0; index < string.length; index++) {
+  if (string[index] !==  newString[newString.length-1]) {
+    newString.push(string[index]);
   }
   
 }
