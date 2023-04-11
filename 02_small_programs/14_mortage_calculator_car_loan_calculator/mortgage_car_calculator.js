@@ -32,7 +32,7 @@ function printer (message) {
 }
 
 // performs validation checks
-function notPositiveIntValueValidation (value) {
+function intValueValidation (value) {
   return value <= 0 || Number.isNaN(Number(value)) || String(value).trimStart() === "" || Object.is(value, -0);
 }
 
@@ -57,7 +57,7 @@ while (setNewCalculation === true) {
   loanAmt = +READLINE_SYNC.prompt();
 
   // validate loan amount input
-  while (notPositiveIntValueValidation(loanAmt)) {
+  while (intValueValidation(loanAmt)) {
     printer(MESSAGES['valueErrorValidation']);
     loanAmt = +READLINE_SYNC.prompt();
   }
@@ -67,7 +67,7 @@ while (setNewCalculation === true) {
   loanDurationInYears = +READLINE_SYNC.prompt();
 
   // validate loan duration input
-  while (notPositiveIntValueValidation(loanDurationInYears)) {
+  while (intValueValidation(loanDurationInYears)) {
     printer(MESSAGES['valueErrorValidation']);
     loanDurationInYears = +READLINE_SYNC.prompt();
   }
@@ -77,7 +77,7 @@ while (setNewCalculation === true) {
   annualRateOfInterest = +READLINE_SYNC.prompt();
 
   // validate annual rate of interest input
-  while (notPositiveIntValueValidation(annualRateOfInterest)) {
+  while (intValueValidation(annualRateOfInterest)) {
     printer(MESSAGES['valueErrorValidation']);
     annualRateOfInterest = +READLINE_SYNC.prompt();
   }
