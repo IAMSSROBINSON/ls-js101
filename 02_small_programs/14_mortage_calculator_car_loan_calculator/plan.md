@@ -135,9 +135,9 @@ START
 - PRINT
   - loanAmount in dollars: $(10.000.00).toFixed(2)
   - loanDurationInYears: 4
-  - apr: 5%
+  - apr: 5.5%
   - MONTHLY_REPAYMENT in dollars: $232.56
-  - TOTAL_AMOUNT_REPAYABLE in $
+  - TOTAL_AMOUNT_REPAYABLE in $11,163.11
 - PROMPT user if they would like to perform a new calculation
 - IF 
   - SET answer variable .toLowerCase() === "yes" or 'y' RUN program again
