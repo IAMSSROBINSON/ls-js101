@@ -48,7 +48,8 @@ function toCurrency (value) {
 
 while (setNewCalculation === true) {
 
-  // FUNCTION INVOCATIONS
+  // MAIN FUNCTIONS
+
   // prints introductory message
   printer(MESSAGES['introduction']);
 
@@ -84,6 +85,8 @@ while (setNewCalculation === true) {
 
   // ---------------------------------------------------------------------------
 
+  // CALCULATIONS
+
   // initialize variables expressions
   aprDecimal = annualRateOfInterest / 100;
 
@@ -97,7 +100,8 @@ while (setNewCalculation === true) {
 
   // ---------------------------------------------------------------------------
 
-  // output: print values
+  // OUTPUT RESULTS
+
   console.log("\n");
   printer(MESSAGES['results_output'].toUpperCase());
   printer(MESSAGES['loanAmount_output'] + `${toCurrency(loanAmt)}`);
@@ -108,7 +112,8 @@ while (setNewCalculation === true) {
 
   // ---------------------------------------------------------------------------
 
-  // RUN PROGRAM AGAIN ?
+  // RESTART PROGRAM ?
+
   console.log("\n");
   printer(MESSAGES['newCalculation']);
   newCalculationAnswer = READLINE_SYNC.prompt();
