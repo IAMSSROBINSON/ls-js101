@@ -63,7 +63,7 @@ while (setNewCalculation === true) {
     loanAmt = +READLINE_SYNC.prompt();
   }
 
-  //get loan duration in years
+  // get loan duration in years
   printer(MESSAGES['loanDurationInYears']);
   loanDurationInYears = +READLINE_SYNC.prompt();
 
