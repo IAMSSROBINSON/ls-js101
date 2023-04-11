@@ -35,7 +35,7 @@ Translated to JavaScript, the formula with example inputs for data looks like th
 <br>
 
 ```JavaScript
-let apr = 5; // INPUT
+let apr = 5.5; // INPUT
 const APR_DECIMAL = apr / 100; // annual percentage rate of interest expressed as a decimal number to use for calculations on values
 
 const MONTHS_IN_ONE_YEAR = 12;
