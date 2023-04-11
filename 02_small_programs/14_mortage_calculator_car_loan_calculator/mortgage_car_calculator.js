@@ -20,7 +20,7 @@ let loanMnths;
 let repayPerM; // OUTPUT
 let totalAmtRepayable; // OUTPUT
 let newCalculationAnswer;
-let setNewCalculation = true;
+let restartProgram = true;
 
 // -----------------------------------------------------------------------------
 
@@ -48,7 +48,7 @@ function toCurrency (value) {
 
 // MAIN FUNCTIONS
 
-while (setNewCalculation === true) {
+while (restartProgram === true) {
 
   // prints introductory message
   printer(MESSAGES['introduction']);
@@ -131,7 +131,7 @@ while (setNewCalculation === true) {
 
     case 'n':
       printer(MESSAGES['goodbye']);
-      setNewCalculation = false;
+      restartProgram = false;
       break;
   }
 }
