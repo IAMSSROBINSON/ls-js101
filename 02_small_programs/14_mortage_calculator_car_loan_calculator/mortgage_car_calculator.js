@@ -113,7 +113,7 @@ while (setNewCalculation === true) {
   printer(MESSAGES['newCalculation']);
   newCalculationAnswer = READLINE_SYNC.prompt();
 
-  while (!["yes", "y", "no", "n"].includes(newCalculationAnswer.toLowerCase()) || newCalculationAnswer.trimStart() === "") {
+  while (!["yes", "y", "no", "n"].includes(newCalculationAnswer.toLowerCase())) {
     printer(MESSAGES['newCalculationValidation']);
     newCalculationAnswer = READLINE_SYNC.prompt();
   }
