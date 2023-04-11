@@ -46,9 +46,9 @@ function toCurrency (value) {
 
 // -----------------------------------------------------------------------------
 
-while (setNewCalculation === true) {
+// MAIN FUNCTIONS
 
-  // MAIN FUNCTIONS
+while (setNewCalculation === true) {
 
   // prints introductory message
   printer(MESSAGES['introduction']);
