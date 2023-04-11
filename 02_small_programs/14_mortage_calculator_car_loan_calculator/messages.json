@@ -9,7 +9,7 @@
   "loanDurationInYears_output" : "Loan duration: ",
   "annualRateOfInterest_output" : "APR: ", 
   "monthlyRepayment_output" : "Monthly repayment: ",
-  "totalAmountRepayable_output" : "Total amount repayable: ",
+  "totalAmtRepayable_output" : "Total amount repayable: ",
   "newCalculation" : "Would you like to perform a new loan calculation: 'yes' or 'no'",
   "newCalculationValidation" : "Please enter:\n'y' for Yes or\n'n' for No':",
   "goodbye" : "Thank you for using The Car Loan Calculator!\nEnd of program."

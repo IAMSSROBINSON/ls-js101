@@ -18,7 +18,7 @@ let aprDecimal;
 let intPerM;
 let loanMnths;
 let repayPerM; // OUTPUT
-let totalAmountRepayable; // OUTPUT
+let totalAmtRepayable; // OUTPUT
 let newCalculationAnswer;
 let setNewCalculation = true;
 
@@ -96,7 +96,7 @@ while (setNewCalculation === true) {
 
   repayPerM = loanAmt * (intPerM / (1 - Math.pow((1 + intPerM), (-loanMnths))));
 
-  totalAmountRepayable = repayPerM * loanMnths;
+  totalAmtRepayable = repayPerM * loanMnths;
 
   // ---------------------------------------------------------------------------
 
@@ -108,7 +108,7 @@ while (setNewCalculation === true) {
   printer(MESSAGES['loanDurationInYears_output'] + `${loanDurationInYears} years`);
   printer(MESSAGES['annualRateOfInterest_output'] + `${annualRateOfInterest}%`);
   printer(MESSAGES['monthlyRepayment_output'] + `${toCurrency(repayPerM)}`);
-  printer(MESSAGES['totalAmountRepayable_output'] + `${toCurrency(totalAmountRepayable)}`);
+  printer(MESSAGES['totalAmtRepayable_output'] + `${toCurrency(totalAmtRepayable)}`);
 
   // ---------------------------------------------------------------------------
 
