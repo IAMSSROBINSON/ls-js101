@@ -14,7 +14,6 @@ for (let index = 0; index < string.length; index++) {
   if (string[index] !==  newString[newString.length-1]) {
     newString.push(string[index]);
   }
-  
 }
 
 return newString.join("");
