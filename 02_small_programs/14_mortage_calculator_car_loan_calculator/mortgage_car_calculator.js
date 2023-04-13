@@ -52,14 +52,14 @@ function getLoan() {
   printer(MESSAGES["loanAmount_prompt"]);
   loanAmount = +READLINE_SYNC.prompt();
 
-  while (intValueValidation(loanAmount)) {
+  while (isValidInt(loanAmount)) {
     printer(MESSAGES["error_int_validation"]);
     loanAmount = +READLINE_SYNC.prompt();
   }
   return loanAmount;
 }
 
-function intValueValidation(value) {
+function isValidInt(value) {
   return (
     value <= 0 ||
     Number.isNaN(Number(value)) ||
@@ -74,7 +74,7 @@ function getLoanDurationYears() {
   printer(MESSAGES["loanDurationInYears_prompt"]);
   loanDurationInYears = READLINE_SYNC.prompt();
 
-  while (validateLoanDuration(loanDurationInYears)) {
+  while (isValidYear(loanDurationInYears)) {
     printer(MESSAGES["error_wholeNumber_validation"]);
     loanDurationInYears = READLINE_SYNC.prompt();
   }
@@ -82,7 +82,7 @@ function getLoanDurationYears() {
   return Number(loanDurationInYears);
 }
 
-function validateLoanDuration(value) {
+function isValidYear(value) {
   return (
     Number(value) <= 0 ||
     Number.isNaN(Number(value)) ||
@@ -98,14 +98,14 @@ function getAPR() {
   printer(MESSAGES["APR_prompt"]);
   aprAmount = READLINE_SYNC.prompt();
 
-  while (aprValidation(aprAmount)) {
+  while (isValidAPR(aprAmount)) {
     printer(MESSAGES["error_int_validation"]);
     aprAmount = READLINE_SYNC.prompt();
   }
   return Number(aprAmount);
 }
 
-function aprValidation(value) {
+function isValidAPR(value) {
   return (
     value < Number(0) ||
     Number.isNaN(Number(value)) ||
