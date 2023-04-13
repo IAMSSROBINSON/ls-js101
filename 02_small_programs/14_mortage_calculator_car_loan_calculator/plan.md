@@ -152,3 +152,94 @@ Flowchart:
 <br>
 
 #### C: Convert to code with purpose
+
+<br>
+
+##### 1st Round Feedback
+
+- loan duration years
+  - able to enter 8.5
+  - validate for whole numbers only
+
+- add 0% apr
+  - no interest
+  - directly divide the loan by loan duration
+
+- for above create helper functions
+  - isValidYear
+  - isValidAPR
+
+- avoid using short form names for variables
+  - ask about the variable name lengths impeding on line length for eslint guidelines
+
+- declare let variables as close to their use as possible (not at the beginning of code)
+
+- refactor logic within main while loop into separate functions. 
+- extract the nested loops into appropriately named functions that by the end the main while loop will have focused well-named functions that explain what is happening in order.
+  
+  - Lines 57–64 to getLoan √
+  - Lines 67–74 to getLoanDuration √
+  - Lines 77–84 to getAPR √
+  - Lines 91–99 to calculateMonthlyPayment √
+  - Lines 105–111 to displayFinalResults √
+  - Lines 117–137 to askToCalculateAgain √
+
+e.g. 
+
+```JavaScript
+function getLoan() {
+  printer(MESSAGES['loanAmount']);
+  loanAmt = +READLINE_SYNC.prompt();
+
+  while (intValueValidation(loanAmt)) {
+    printer(MESSAGES['valueErrorValidation']);
+    loanAmt = +READLINE_SYNC.prompt();
+  }
+  return loanAmt;
+}
+
+while(true) {
+  //...other code
+
+  let loanAmount = getLoan();
+  let years = getLoanDuration();
+  let APR = getAPR();
+
+  //...other code
+}
+```
+<br>
+
+##### Implementation
+
+###### getLoan function
+
+- extract to function
+- function should prompt user for loanAmount
+- function should validate loanAmount
+- function should return loanAmount
+
+<br>
+
+###### getLoanDurationYears
+
+- extract to function
+- function should prompt user for duration of loan
+- function should call validate duration for empty input, alpha chars, whole number only entry
+- function should return loanDurationYears
+
+<br>
+
+###### getAPR
+
+- extract to function
+- function should prompt user for annual percentage rate
+- function should call validate function
+  - allow 0% apr
+  - calculation does not need to change just allow 0 entry
+  - might need to create own validator function for this
+- function should return apr
+
+
+
+
