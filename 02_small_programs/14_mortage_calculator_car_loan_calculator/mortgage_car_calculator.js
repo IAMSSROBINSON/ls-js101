@@ -10,12 +10,12 @@ while (restartProgram === true) {
   let loanAmount = getLoan();
   let loanDurationInYears = getLoanDurationYears();
   let aprAmount = getAPR();
-  let aprDecimal = getAPRdecimal(aprAmount);
-  let interestPerMonth = getInterestPerMonth(aprDecimal);
-  let loanDurationMonths = getLoanMonths(loanDurationInYears);
-  let monthlyPayment = getMonthlyPayment(loanAmount,
+  let aprDecimal = calculateAPRdecimal(aprAmount);
+  let interestPerMonth = calculateInterestPerMonth(aprDecimal);
+  let loanDurationMonths = calculateLoanMonths(loanDurationInYears);
+  let monthlyPayment = calculateMonthlyPayment(loanAmount,
     interestPerMonth, loanDurationMonths);
-  let totalRepayable = getTotalAmountRepayable(monthlyPayment,
+  let totalRepayable = calculateTotalAmountRepayable(monthlyPayment,
     loanDurationMonths);
   displayFinalResults(
     loanAmount,
@@ -24,7 +24,7 @@ while (restartProgram === true) {
     monthlyPayment,
     totalRepayable
   );
-  askToCalculateAgain();
+  startAgain();
 }
 
 // -----------------------------------------------------------------------------
@@ -114,19 +114,19 @@ function aprValidation(value) {
   );
 }
 
-function getAPRdecimal(aprAmount) {
+function calculateAPRdecimal(aprAmount) {
   return aprAmount / 100;
 }
 
-function getInterestPerMonth(aprDecimal) {
+function calculateInterestPerMonth(aprDecimal) {
   return aprDecimal / MONTHS_IN_ONE_YEAR;
 }
 
-function getLoanMonths(loanDurationInYears) {
+function calculateLoanMonths(loanDurationInYears) {
   return loanDurationInYears * MONTHS_IN_ONE_YEAR;
 }
 
-function getMonthlyPayment(loanAmount, interestPerMonth, loanDurationMonths) {
+function calculateMonthlyPayment(loanAmount, interestPerMonth, loanDurationMonths) {
   if (interestPerMonth === 0) {
     return loanAmount / loanDurationMonths;
   }
@@ -136,7 +136,7 @@ function getMonthlyPayment(loanAmount, interestPerMonth, loanDurationMonths) {
   (1 - Math.pow(1 + interestPerMonth, -loanDurationMonths)));
 }
 
-function getTotalAmountRepayable(monthlyPayment, loanDurationMonths) {
+function calculateTotalAmountRepayable(monthlyPayment, loanDurationMonths) {
   return monthlyPayment * loanDurationMonths;
 }
 
@@ -160,7 +160,7 @@ function displayFinalResults(
   );
 }
 
-function askToCalculateAgain() {
+function startAgain() {
   let newCalculationAnswer;
 
   printer(MESSAGES["reStartProgram_prompt"]);
