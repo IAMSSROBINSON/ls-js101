@@ -126,7 +126,8 @@ function calculateLoanMonths(loanDurationInYears) {
   return loanDurationInYears * MONTHS_IN_ONE_YEAR;
 }
 
-function calculateMonthlyPayment(loanAmount, interestPerMonth, loanDurationMonths) {
+function calculateMonthlyPayment(loanAmount,
+  interestPerMonth, loanDurationMonths) {
   if (interestPerMonth === 0) {
     return loanAmount / loanDurationMonths;
   }
