@@ -11,4 +11,13 @@ console.log(myOtherWord);
 
 /*
 
+variable: myWord declared and initialized to string value: 'Hello'
+variable: myOther declared and initialized to value myWord points to: 'Hello'
+value at address myWord points to reassigned at same address to value: 'Goodbye'
+
+the console will print:
+myWord => 'Goodbye'
+myOtherWord => 'Hello'
+
+
 */
