@@ -1,0 +1,8 @@
+{
+  "welcome" : "Welcome To The Rock, Paper, Scissors Game!",
+  "getSelection" : "Please make your selection:",
+  "invalidChoice" : "Invalid choice. Enter 'rock', 'paper' or 'scissors'",
+  "playAgain" : "Would you like to play again? y/n ",
+  "playAgainValidation" : "Please enter 'y' or 'n' ",
+  "endOfGame" : "Thank you for playing The Rock, Paper, Scissors Game!\n"
+}
