@@ -60,7 +60,7 @@ while (true) {
   printer(`Computer chose: ${saveComputerChoice}`);
 
   let saveWinner = getWinner(savePlayersChoice, saveComputerChoice);
-  console.log(saveWinner);
+  printer(saveWinner);
 
   printer(`${MESSAGES["playAgain"]}`);
   let savePlayAgain = READLINESYNC.prompt().toLowerCase();
