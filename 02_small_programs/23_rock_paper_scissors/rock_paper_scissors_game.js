@@ -4,7 +4,6 @@ const VALID_CHOICES = ["rock", "paper", "scissors"];
 const PLAYER_NAME = "Player:";
 const COMPUTER_NAME = "Computer:";
 
-// printer function
 function printer(message) {
   console.log(`\n=> ${message}`);
 }
@@ -56,8 +55,8 @@ while (true) {
   let savePlayersChoice = getPlayersChoice();
   let saveComputerChoice = getComputerChoice();
 
-  printer(`You chose: ${savePlayersChoice}`);
-  printer(`Computer chose: ${saveComputerChoice}`);
+  printer(`${PLAYER_NAME} chose: ${savePlayersChoice.toLowerCase()}`);
+  printer(`${COMPUTER_NAME} chose: ${saveComputerChoice.toLowerCase()}`);
 
   let saveWinner = getWinner(savePlayersChoice, saveComputerChoice);
   printer(saveWinner);
