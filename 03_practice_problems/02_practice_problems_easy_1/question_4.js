@@ -8,3 +8,4 @@ let munstersDescription = "the Munsters are CREEPY and Spooky.";
 // => The munsters are creepy and spooky.
 
 console.log(newString(munstersDescription));
+// The munsters are creepy and spooky.
