@@ -1,27 +1,19 @@
-// Will the code below raise an error?
+// Let's do some "ASCII Art": a stone-age form of nerd artwork from back in the days before computers had video screens.
 
-// let numbers = [1, 2, 3];
-// numbers[6] = 5;
+// For this practice problem, write a program that outputs The Flintstones Rock! 10 times, with each line indented 1 space to the right of the line above it. The output should start out like this:
 
-// console.log(numbers[6])
+// The Flintstones Rock!
+//  The Flintstones Rock!
+//   The Flintstones Rock!
+//    ...
 
-/*
-No it should fill in the elements that have not been defined with undefined but the elements are actually empty
-*/
+let string = "The Flintstones Rock!";
+let space = [];
+let count = 0;
 
-
-
-// Bonus:
-let numbers = [1, 2, 3];
-numbers[6] = 5;
-numbers[4];  
-// what will this line return? // it should return undefined
-
-console.log(numbers);
-console.log(numbers[0]);
-console.log(numbers[1]);
-console.log(numbers[2]);
-console.log(numbers[3]);
-console.log(numbers[4]);
-console.log(numbers[5]);
-console.log(numbers[6]);
+while (count < 10) {
+  console.log(`${space.join("")}${string}`);
+  space.push(" ");
+  count++
+}
+console.log(space.length)
