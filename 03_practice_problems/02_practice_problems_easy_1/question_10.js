@@ -5,6 +5,7 @@ let advice = "Few things in life are as important as house training your pet din
 // Expected return value:
 // => 'Few things in life are as important as '
 
-console.log(advice.indexOf('house'))
-console.log(advice.slice(0, 39))
+console.log(advice.indexOf('house'));
+let newVersionOfAdvice = advice.slice(0, 39);
+console.log(newVersionOfAdvice = advice.slice(0, 39));
 
