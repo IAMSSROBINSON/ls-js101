@@ -1,6 +1,6 @@
 # Errors
 
-When the JavaScript interpreter stops running a program for a number of reasons it can create an Error Object that describes the exception raised / error thrown /problem that stopped the program. 
+When the JavaScript interpreter stops running a program for a number of reasons it can create an Error Object that describes the exception raised / error thrown /problem that stopped the program. 1111 .  
 
 <br>
 
