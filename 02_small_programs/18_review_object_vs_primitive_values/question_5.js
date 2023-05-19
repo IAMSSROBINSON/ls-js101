@@ -13,7 +13,7 @@ new variables declared and initialized to array with a string value inside
 index 0 of array returns a string
 .toUpperCase() method performed on string(primitive value) returning new string
 console.log prints original value of variable which is the array
-variable has not been mutated: ['Hello']
+variable that has not been mutated: ['Hello']
 
 */
 
