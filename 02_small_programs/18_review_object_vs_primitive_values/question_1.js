@@ -13,6 +13,8 @@ console.log(myWord);
 new variable declared and string value assigned
 String is primitive value
 method used on string variable will return new string value
-console. will log 'Hello' as original value was not mutated
+console. will log 'Hello' as original value was not mutated.
+the .concat() method returns a new string. It concatenates 2 or more strings.
+the method was called but not assigned to a variable thus the value is unsaved.
 
 */
