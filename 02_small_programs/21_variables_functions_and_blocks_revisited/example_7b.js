@@ -1,7 +1,7 @@
-let myVar = 1; 
+let myVar = 1;
 
 function myFunc (myVar) {
-  myVar = 2; 
+  myVar = 2;
 }
 
 myFunc(myVar);
