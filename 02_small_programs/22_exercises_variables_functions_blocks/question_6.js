@@ -18,7 +18,3 @@ console.log(word); // prints value of word: 'hello!!!''
 console.log(capitalizedWord); // prints value of capitalizedWord 'Hello'
 console.log(exclaimedWord); // prints value of exclaimedWord 'hello!!!'
 
-/*
-
-
-*/
