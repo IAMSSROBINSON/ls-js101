@@ -38,6 +38,12 @@ Don't add your incrementing logic to displayWinner. Keep your functions simple; 
 - create let playerScore = 0, computerScore = 0; global variables
 - if playerScore === 3 or computerScore === 3 print grand winner and score
 - update scores in getWinner function but logic in separate function getGrandWinner
+
+Get Grand Winner
+- winner or tie returned from getWinner function
+- call getGrandWinner function
+  - function accepts decision argument
+  - if decision === user: increase 
 <br>
 
 ## ESLint

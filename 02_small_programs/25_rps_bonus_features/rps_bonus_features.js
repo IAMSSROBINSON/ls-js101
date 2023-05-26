@@ -111,6 +111,10 @@ function convertCharToString(choice) {
   return stringToReturn.toLowerCase();
 }
 
+function getGrandWinner () {
+  
+}
+
 // start the program with a condition that is true
 // when we break out of this loop the program will stop
 while (true) {
