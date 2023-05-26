@@ -28,72 +28,53 @@ function randomNumber(min, max) {
 
 // winner extracted to function for better separation of concerns
 function getWinner(userMove, computerMove) {
-  if ((userMove[0] || userMove === "sp" || userMove === "spock" ) === (computerMove[0] || computerMove === "sp" || computerMove === "spock" )) {
+  userMove = convertCharToString(userMove);
+  computerMove = convertCharToString(computerMove);
+
+  if (userMove === computerMove) {
     prompt(`The game is tied!`);
   } else if (
-    userMove === "rock" ||
-    ("r" && computerMove === "paper") ||
-    "p" ||
-    userMove === "paper" ||
-    ("p" && computerMove === "scissors") ||
-    "s" ||
-    userMove === "scissors" ||
-    ("s" && computerMove === "rock") ||
-    "r" ||
-    userMove === "rock" ||
-    ("r" && computerMove === "lizard") ||
-    "l" ||
-    userMove === "lizard" ||
-    ("l" && computerMove === "paper") ||
-    "p" ||
-    userMove === "lizard" ||
-    ("l" && computerMove === "spock") ||
-    "sp" ||
-    userMove === "spock" ||
-    ("sp" && computerMove === "rock") ||
-    "r" ||
-    userMove === "spock" ||
-    ("sp" && computerMove === "scissors") ||
-    userMove === "scissors" ||
-    ("s" && computerMove === "lizard") ||
-    "l" ||
-    userMove === "paper" ||
-    ("p" && computerMove === "spock") ||
-    "sp"
+    (userMove === "rock" || userMove === "r") &&
+    (computerMove === "scissors" ||
+      computerMove === "s" ||
+      computerMove === "lizard" ||
+      computerMove === "l")
   ) {
-    prompt(`The Computer wins!`);
+    console.log("The User wins!");
   } else if (
-    computerMove === "rock" ||
-    ("r" && userMove === "paper") ||
-    "p" ||
-    computerMove === "paper" ||
-    ("p" && userMove === "scissors") ||
-    "s" ||
-    computerMove === "scissors" ||
-    ("s" && userMove === "rock") ||
-    "r" ||
-    computerMove === "rock" ||
-    ("r" && userMove === "lizard") ||
-    "l" ||
-    computerMove === "lizard" ||
-    ("l" && userMove === "paper") ||
-    "p" ||
-    computerMove === "lizard" ||
-    ("l" && userMove === "spock") ||
-    "sp" ||
-    computerMove === "spock" ||
-    ("sp" && userMove === "rock") ||
-    "r" ||
-    computerMove === "spock" ||
-    ("sp" && userMove === "scissors") ||
-    computerMove === "scissors" ||
-    ("s" && userMove === "lizard") ||
-    "l" ||
-    computerMove === "paper" ||
-    ("p" && userMove === "spock") ||
-    "sp"
+    (userMove === "paper" || userMove === "p") &&
+    (computerMove === "rock" ||
+      computerMove === "r" ||
+      computerMove === "spock" ||
+      computerMove === "sp")
   ) {
-    prompt(`The User wins!`);
+    console.log("The User wins!");
+  } else if (
+    (userMove === "scissors" || userMove === "s") &&
+    (computerMove === "paper" ||
+      computerMove === "p" ||
+      computerMove === "lizard" ||
+      computerMove === "l")
+  ) {
+    console.log("The User wins!");
+  } else if (
+    (userMove === "lizard" || userMove === "l") &&
+    (computerMove === "paper" ||
+      computerMove === "p" ||
+      computerMove === "spock" ||
+      computerMove === "sp")
+  ) {
+    console.log("The User wins!");
+  } else if (
+    (userMove === "spock" || userMove === "sp") &&
+    (computerMove === "rock" ||
+      computerMove === "r" ||
+      computerMove === "scissors" ||
+      computerMove === "s")
+  ) {
+    console.log("The User wins!");
+  } else {
+    console.log("The Computer wins!");
   }
 }
 
@@ -102,27 +83,29 @@ function convertCharToString(choice) {
 
   switch (choice) {
     case "r":
+    case "rock":
       stringToReturn = "Rock";
       break;
 
     case "p":
+    case "paper":
       stringToReturn = "Paper";
       break;
 
     case "s":
+    case "scissors":
       stringToReturn = "Scissors";
       break;
 
     case "l":
+    case "lizard":
       stringToReturn = "Lizard";
       break;
 
     case "sp":
+    case "spock":
       stringToReturn = "Spock";
       break;
-
-    default:
-      stringToReturn = choice;
   }
 
   return stringToReturn.toLowerCase();
@@ -142,13 +125,12 @@ while (true) {
     userMove = readline.question();
   }
 
-  let randomIndex = randomNumber(0, VALID_CHOICES.length / 2 - 1);
+  let randomIndex = randomNumber(0, ((VALID_CHOICES.length / 2) - 1));
   let computerMove = VALID_CHOICES[randomIndex];
   prompt(computerMove);
 
   prompt(`Your move is: ${convertCharToString(userMove)}`);
   prompt(`Computers move is: ${convertCharToString(computerMove)}`);
-
 
   getWinner(userMove, computerMove);
 
