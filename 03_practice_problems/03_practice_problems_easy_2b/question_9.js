@@ -6,6 +6,6 @@ let leftMargin = (40 - title.length) / 2;
 let centredString = " ".repeat(leftMargin) + title + " ".repeat(leftMargin);
 console.log(centredString)
 
-let padStartString = title.padStart(leftMargin + title.length);
+let padStartString = title.padStart(leftMargin + title.length);w
 console.log(padStartString)
 
