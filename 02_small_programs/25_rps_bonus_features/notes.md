@@ -28,6 +28,7 @@ Note that if you do bonus #1, you'll have two words that start with "s." How do 
 sp will be equal to spock
 s will continue to be for scissors
 
+
 <br>
 
 ## Best of Five Keep score of the player's and computer's wins. 

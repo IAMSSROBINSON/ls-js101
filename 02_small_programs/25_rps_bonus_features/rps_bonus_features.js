@@ -3,7 +3,18 @@ const readline = require("readline-sync");
 
 // convention to make global const variables uppercase & define top of program
 // using an array in this way allows for adding extra choices later if required
-const VALID_CHOICES = ["rock", "paper", "scissors", "lizard", "spock"];
+const VALID_CHOICES = [
+  "rock",
+  "paper",
+  "scissors",
+  "lizard",
+  "spock",
+  "r",
+  "p",
+  "s",
+  "l",
+  "sp",
+];
 
 // make output messages more distinctive
 function prompt(message) {
@@ -17,34 +28,104 @@ function randomNumber(min, max) {
 
 // winner extracted to function for better separation of concerns
 function getWinner(userMove, computerMove) {
-  if (userMove === computerMove) {
+  if ((userMove[0] || userMove === "sp" || userMove === "spock" ) === (computerMove[0] || computerMove === "sp" || computerMove === "spock" )) {
     prompt(`The game is tied!`);
   } else if (
-    (userMove === "rock" && computerMove === "paper") ||
-    (userMove === "paper" && computerMove === "scissors") ||
-    (userMove === "scissors" && computerMove === "rock") ||
-    (userMove === "rock" && computerMove === "lizard") ||
-    (userMove === "lizard" && computerMove === "paper") ||
-    (userMove === "lizard" && computerMove === "spock") ||
-    (userMove === "spock" && computerMove === "rock") ||
-    (userMove === "spock" && computerMove === "scissors") ||
-    (userMove === "scissors" && computerMove === "lizard") ||
-    (userMove === "paper" && computerMove === "spock")
+    userMove === "rock" ||
+    ("r" && computerMove === "paper") ||
+    "p" ||
+    userMove === "paper" ||
+    ("p" && computerMove === "scissors") ||
+    "s" ||
+    userMove === "scissors" ||
+    ("s" && computerMove === "rock") ||
+    "r" ||
+    userMove === "rock" ||
+    ("r" && computerMove === "lizard") ||
+    "l" ||
+    userMove === "lizard" ||
+    ("l" && computerMove === "paper") ||
+    "p" ||
+    userMove === "lizard" ||
+    ("l" && computerMove === "spock") ||
+    "sp" ||
+    userMove === "spock" ||
+    ("sp" && computerMove === "rock") ||
+    "r" ||
+    userMove === "spock" ||
+    ("sp" && computerMove === "scissors") ||
+    userMove === "scissors" ||
+    ("s" && computerMove === "lizard") ||
+    "l" ||
+    userMove === "paper" ||
+    ("p" && computerMove === "spock") ||
+    "sp"
   ) {
     prompt(`The Computer wins!`);
   } else if (
-    (computerMove === "rock" && userMove === "paper") ||
-    (computerMove === "paper" && userMove === "scissors") ||
-    (computerMove === "scissors" && userMove === "rock") ||
-    (computerMove === "rock" && userMove === "lizard") ||
-    (computerMove === "lizard" && userMove === "paper") ||
-    (computerMove === "lizard" && userMove === "spock") ||
-    (computerMove === "spock" && userMove === "rock") ||
-    (computerMove === "spock" && userMove === "scissors") ||
-    (computerMove === "scissors" && userMove === "lizard") ||
-    (computerMove === "paper" && userMove === "spock")) {
+    computerMove === "rock" ||
+    ("r" && userMove === "paper") ||
+    "p" ||
+    computerMove === "paper" ||
+    ("p" && userMove === "scissors") ||
+    "s" ||
+    computerMove === "scissors" ||
+    ("s" && userMove === "rock") ||
+    "r" ||
+    computerMove === "rock" ||
+    ("r" && userMove === "lizard") ||
+    "l" ||
+    computerMove === "lizard" ||
+    ("l" && userMove === "paper") ||
+    "p" ||
+    computerMove === "lizard" ||
+    ("l" && userMove === "spock") ||
+    "sp" ||
+    computerMove === "spock" ||
+    ("sp" && userMove === "rock") ||
+    "r" ||
+    computerMove === "spock" ||
+    ("sp" && userMove === "scissors") ||
+    computerMove === "scissors" ||
+    ("s" && userMove === "lizard") ||
+    "l" ||
+    computerMove === "paper" ||
+    ("p" && userMove === "spock") ||
+    "sp"
+  ) {
     prompt(`The User wins!`);
   }
+}
+
+function convertCharToString(choice) {
+  let stringToReturn;
+
+  switch (choice) {
+    case "r":
+      stringToReturn = "Rock";
+      break;
+
+    case "p":
+      stringToReturn = "Paper";
+      break;
+
+    case "s":
+      stringToReturn = "Scissors";
+      break;
+
+    case "l":
+      stringToReturn = "Lizard";
+      break;
+
+    case "sp":
+      stringToReturn = "Spock";
+      break;
+
+    default:
+      stringToReturn = choice;
+  }
+
+  return stringToReturn.toLowerCase();
 }
 
 // start the program with a condition that is true
@@ -61,12 +142,13 @@ while (true) {
     userMove = readline.question();
   }
 
-  let randomIndex = randomNumber(0, VALID_CHOICES.length - 1);
+  let randomIndex = randomNumber(0, VALID_CHOICES.length / 2 - 1);
   let computerMove = VALID_CHOICES[randomIndex];
   prompt(computerMove);
 
-  prompt(`Your move is: ${userMove}`);
-  prompt(`Computers move is: ${computerMove}`);
+  prompt(`Your move is: ${convertCharToString(userMove)}`);
+  prompt(`Computers move is: ${convertCharToString(computerMove)}`);
+
 
   getWinner(userMove, computerMove);
 
