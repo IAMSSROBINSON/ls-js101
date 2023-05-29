@@ -111,6 +111,23 @@ function convertCharToString(choice) {
   return stringToReturn.toLowerCase();
 }
 
+function createPlayer () {
+  let score = 0;
+
+  function increaseScore () {
+    return score = score + 1;
+  }
+
+  function getScore () {
+    return score;
+  }
+
+  return {
+    increaseScore : increaseScore,
+    getScore : getScore
+  };
+}
+
 function getGrandWinner () {
   
 }
@@ -118,6 +135,14 @@ function getGrandWinner () {
 // start the program with a condition that is true
 // when we break out of this loop the program will stop
 while (true) {
+
+  let userPlayer = createPlayer();
+  console.log(userPlayer.getScore());
+  userPlayer.increaseScore();
+  console.log(userPlayer.getScore());
+  userPlayer.increaseScore();
+  console.log(userPlayer.getScore());
+
   // ask user to choose rock, paper or scissors
   // .join() method accepts a delimiter to separate elements, returns string
   prompt(`Please choose your move: ${VALID_CHOICES.join(", ")}:`);

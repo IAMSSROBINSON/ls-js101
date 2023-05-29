@@ -32,18 +32,20 @@ s will continue to be for scissors
 <br>
 
 ## Best of Five Keep score of the player's and computer's wins. 
-When either the player or computer reaches three wins, the match is over, and the winning player becomes the grand winner. 
-Don't add your incrementing logic to displayWinner. Keep your functions simple; they should perform one logical task — no more, no less.
 
-- create let playerScore = 0, computerScore = 0; global variables
-- if playerScore === 3 or computerScore === 3 print grand winner and score
-- update scores in getWinner function but logic in separate function getGrandWinner
+Use closure and encapsulation to create a createPlayer function:
+- function will declare a score variable
+- closure function will increaseScore + 1
+- closure will return score from getScore function
+- return both in an object from the main function
 
-Get Grand Winner
-- winner or tie returned from getWinner function
-- call getGrandWinner function
-  - function accepts decision argument
-  - if decision === user: increase 
+Create userPlayer variable,
+Create computerPlayer variable
+  - call createPlayer to receive object
+  - when user or computer wins a game call relevant function
+
+** DRAW FLOW_CHART
+
 <br>
 
 ## ESLint
@@ -51,3 +53,5 @@ Run program through ESLint to see what problems it identifies, and try to fix th
 <br>
 
 ## Simplifying displayWinner
+
+A switch statement could be used to simplify. 
