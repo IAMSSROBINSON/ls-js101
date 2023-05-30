@@ -27,6 +27,23 @@ function playerWins (userMove, computerMove) {
   return winningCombinations[userMove].includes(computerMove);
 }
 
+function createPlayer () {
+  let score = 0;
+
+  function increaseScore () {
+    score += 1;
+  }
+
+  function getScore () {
+    return score;
+  }
+
+  return {
+    increaseScore: increaseScore,
+    getScore : getScore
+  };
+}
+
 prompt(`Welcome to Rock, Paper, Scissors, Lizard, Spock!\n`);
 
 prompt(`Your move:\nEnter rock, paper, scissors, lizard or spock:`);
@@ -47,57 +64,38 @@ prompt(`Computers move:\nComputer will choose rock, paper, scissors, lizard or s
 let computerMove = VALID_MOVES[Math.floor(Math.random() * VALID_MOVES.length)];
 console.log(computerMove);
 
+let userPlayer = createPlayer();
+let computerPlayer = createPlayer();
+
 if (playerWins(userMove, computerMove)) {
   prompt(`User Wins!\n`);
   prompt(`UserMove: ${userMove} √`);
   prompt(`ComputerMove: ${computerMove}\n`);
+  userPlayer.increaseScore();
 } else if (playerWins(computerMove, userMove)) {
   prompt(`Computer Wins!\n`);
   prompt(`UserMove: ${userMove}`);
   prompt(`ComputerMove: ${computerMove} √\n`);
+  computerPlayer.increaseScore();
 } else {
   prompt(`The game is Tied!\n`);
   prompt(`UserMove: ${userMove}`);
   prompt(`ComputerMove: ${computerMove}\n`);
 }
 
+prompt(`Scores:`);
+prompt(`User: ${userPlayer.getScore()}`);
+prompt(`Computer: ${computerPlayer.getScore()}\n`);
+
 /*
 
-getWinner function:
+Scores:
 
-- if (playerWins^) {
-  console.log('User Wins!);
-} else if (userMove === computerMove) {
-  console.log('The game is tied!')
-} else {
-   console.log('Computer Wins!);
-}
+use a closure function to:
+- keep score
+- increaseScore(){}
+- get score(){}
 
-^playerWins(userMove, computerMove){} function will include an object structure
-- the key/property will be the winning move :
-- the value will be an array of potential moves that lose against that move
-- we want to return an evaluation to true if
-  - userMove/key matches and the value.includes(computerMove)
-
-
-EXAMPLE:
-```JavaScript
-let userMove = 'paper';
-let computerMove = 'rock';
-
-// returns evaluation to true if winning combination is matched
-// all winning combinations should be present in this function
-function playerWins (userMove, computerMove) {
-  let obj = {
-    rock : ['scissors'],
-    paper : ['rock'],
-    scissors : ['paper']
-  }
-
-  return obj[userMove].includes(computerMove);
-}
-
-console.log(playerWins(userMove, computerMove));
-```
+use encapsulation to return {increaseScore, getScore}
 */
 
