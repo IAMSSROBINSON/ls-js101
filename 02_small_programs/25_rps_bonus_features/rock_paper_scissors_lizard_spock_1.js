@@ -27,7 +27,7 @@ function returnLongFormMove(move) {
   return move;
 }
 
-function playerWins(userMove, computerMove) {
+function playerWins (userMove, computerMove) {
   let winningCombinations = {
     rock: ["scissors", "lizard"],
     paper: ["rock", "spock"],
