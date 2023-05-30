@@ -31,15 +31,9 @@ while (!VALID_MOVES.includes(userMove) &&
 
 userMove = shortFormToLongForm(userMove);
 
+prompt(`Computer move: Enter rock, paper, scissors, lizard or spock: \n`);
+let computerMove = VALID_MOVES[Math.floor(Math.random() * VALID_MOVES.length)];
+console.log('computerMove:', computerMove);
 
-console.log(userMove);
+console.log('userMove:', userMove);
 
-/*
-Validate userMove for input:
-
-no empty strings allowed
-must be valid move
-must be a string
-lowercase
-
-*/
