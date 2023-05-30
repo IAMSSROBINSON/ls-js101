@@ -39,14 +39,14 @@ function playerWins(userMove, computerMove) {
   return winningCombinations[userMove].includes(computerMove);
 }
 
-function createPlayer() {
+function createPlayer () {
   let score = 0;
 
-  function increaseScore() {
+  function increaseScore () {
     score += 1;
   }
 
-  function getScore() {
+  function getScore () {
     return score;
   }
 
@@ -61,7 +61,7 @@ function createPlayer() {
   };
 }
 
-function displayUserWins(userPlayer, userMove, computerMove) {
+function displayUserWins (userPlayer, userMove, computerMove) {
   console.log(`\n`);
   prompt(`User Wins!`);
   prompt(`UserMove: ${userMove} √`);
@@ -69,7 +69,7 @@ function displayUserWins(userPlayer, userMove, computerMove) {
   userPlayer.increaseScore();
 }
 
-function displayComputerWins(computerPlayer, computerMove, userMove) {
+function displayComputerWins (computerPlayer, computerMove, userMove) {
   console.log(`\n`);
   prompt(`Computer Wins!`);
   prompt(`UserMove: ${userMove}`);
@@ -77,13 +77,13 @@ function displayComputerWins(computerPlayer, computerMove, userMove) {
   computerPlayer.increaseScore();
 }
 
-function displayTiedGame(userMove, computerMove) {
+function displayTiedGame (userMove, computerMove) {
   prompt(`The game is Tied!\n`);
   prompt(`UserMove: ${userMove}`);
   prompt(`ComputerMove: ${computerMove}\n`);
 }
 
-function displayScores(userPlayer, computerPlayer) {
+function displayScores (userPlayer, computerPlayer) {
   prompt(`Scores:`);
   prompt(`User: ${userPlayer.getScore()}`);
   prompt(`Computer: ${computerPlayer.getScore()}\n`);
