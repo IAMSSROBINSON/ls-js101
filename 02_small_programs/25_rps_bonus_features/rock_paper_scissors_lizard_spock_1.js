@@ -127,8 +127,10 @@ while (true) {
   if (userPlayer.getScore() === GRAND_WINNING_SCORE) {
     prompt(`You Won Best Of 5 Games! You are the Grand Winner!`);
     userPlayer.resetScore();
+    computerPlayer.resetScore();
   } else if (computerPlayer.getScore() === GRAND_WINNING_SCORE) {
     prompt(`Computer Won Best Of 5 Games! Computer is the Grand Winner!`);
+    userPlayer.resetScore();
     computerPlayer.resetScore();
   }
 
