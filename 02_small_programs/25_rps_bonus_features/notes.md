@@ -50,6 +50,7 @@ Create computerPlayer variable
 
 ## ESLint
 Run program through ESLint to see what problems it identifies, and try to fix them.
+
 <br>
 
 ## Simplifying displayWinner
