@@ -7,4 +7,4 @@ function lowerInitial(word) {
 
 console.log(lowerInitial("Joe")); // "j"
 console.log(lowerInitial("Karen")); // "k"
-console.log(lowerInitial("")); //
+console.log(lowerInitial("")); // "-"
