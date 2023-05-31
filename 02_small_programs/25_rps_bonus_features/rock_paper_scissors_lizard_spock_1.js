@@ -100,7 +100,7 @@ while (true) {
 
   while (!isValidMove(userMove)) {
     prompt(
-      `Invalid move! Please enter a valid move:\n\nrock or r,\npaper or p,\nscissors or s,\nlizard or l,\nspock or sp,\n`
+      `Invalid move! Please enter a valid move:\n\nrock or r,\npaper or p,\nscissors or s,\nlizard or l,\nspock or sp\n`
     );
     userMove = READLINE.question();
   }
@@ -138,7 +138,7 @@ while (true) {
   let answer = READLINE.question();
   answer = answer.toLowerCase();
   while (!['y', 'yes', 'n', 'no'].includes(answer)) {
-    prompt(`Invalid entry! Please enter 'y) yes or n) no:`);
+    prompt(`Invalid entry! Please enter y) yes or n) no`);
     answer = READLINE.question();
     answer = answer.toLowerCase();
   }
